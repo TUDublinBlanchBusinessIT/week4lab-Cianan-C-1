@@ -30,19 +30,44 @@ export default function App() {
     Alert.alert("Your GPA is " + gpa);
   }
 
+const styles = StyleSheet.create({
+  container: {
+    flexDirection: "row",
+    justifyContent: "centre",
+    padding: "2px"
+  },
+  row: {
+    flexDirection: "row",
+    alignItems: "centre",
+    marginTop: "4px"
+
+  },
+  label: {
+    flex: "1",
+    alignItems: "centre",
+    marginTop: "10px",
+    padding: "2px"
+  },
+  textInput: {
+    flex: "2",
+    border: "1px solid black",
+    padding: "2px",
+    alignItems: "centre"
+  }
+});
 
 return (
     <SafeAreaView>
-      <View><Text style={{flexDirection: "row", fontWeight: "bold", fontSize: 24, textAlign:"center", marginTop: "%10"}}>GPA Calculator</Text></View>
-      <View>
+      <View style={styles.row}><Text style={{flexDirection: "row", fontWeight: "bold", fontSize: 24, textAlign:"center", marginTop: "%10"}}>GPA Calculator</Text></View>
+      <View style={styles.row}>
         <Text>Maths</Text>
-        <TextInput  placeholder="Grade" onChangeText={setSswd}/>
+        <TextInput style={styles.textInput} placeholder="Grade" onChangeText={setSswd}/>
       </View>
-      <View >
+      <View style={styles.row} >
         <Text>Organisational Behaviour</Text>
-        <TextInput placeholder="Grade" onChangeText={setOb}/>
+        <TextInput style={styles.textInput} placeholder="Grade" onChangeText={setOb}/>
       </View>
-      <View >
+      <View style={styles.row}>
         <Button title="submit" onPress={clickMe}/>
       </View>
     </SafeAreaView>
