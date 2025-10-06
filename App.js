@@ -6,6 +6,10 @@ export default function App() {
   
   const [sswd, setSswd] = useState('D');
   const [ob, setOb] = useState('D');
+  const [fm, setFm] = useState('D');
+  const [ma, setMa] = useState('D');
+  const [ooap, setOoap] = useState('D');
+  const [dm, setDm] = useState('D');
   
   var gpa=0;
   var credits=5;
@@ -25,6 +29,15 @@ export default function App() {
     
     //calculate the gpa as the totalsGradeScores divided by the totalPossibleCredits
     //Output the calculated GPA result to the user using an alert (you must concatenate the gpa)
+
+    totalGradeScores += (gradePoints [fm] * credits);
+
+    totalGradeScores += (gradePoints [ma] * credits);
+
+    totalGradeScores += (gradePoints [ooap] * credits);
+
+    totalGradeScores += (gradePoints [dm] * credits);
+
     gpa = totalGradeScores / totalPossibleCredits
     alert("Your GPA is " + gpa);
     Alert.alert("Your GPA is " + gpa);
@@ -65,6 +78,22 @@ return (
       </View>
       <View style={styles.row} >
         <Text>Organisational Behaviour</Text>
+        <TextInput style={styles.textInput} placeholder="Grade" onChangeText={setOb}/>
+      </View>
+      <View style={styles.row} >
+        <Text>Financial Management</Text>
+        <TextInput style={styles.textInput} placeholder="Grade" onChangeText={setOb}/>
+      </View>
+      <View style={styles.row} >
+        <Text>Mobile Applications</Text>
+        <TextInput style={styles.textInput} placeholder="Grade" onChangeText={setOb}/>
+      </View>
+      <View style={styles.row} >
+        <Text>Object Oriented Design</Text>
+        <TextInput style={styles.textInput} placeholder="Grade" onChangeText={setOb}/>
+      </View>
+      <View style={styles.row} >
+        <Text>Digital Marketing</Text>
         <TextInput style={styles.textInput} placeholder="Grade" onChangeText={setOb}/>
       </View>
       <View style={styles.row}>
