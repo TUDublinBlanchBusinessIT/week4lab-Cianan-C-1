@@ -17,13 +17,17 @@ export default function App() {
     Alert.alert("this is the click me button"); //alert for phone
     //get the studnet's gradePointsfor SSWD, multiply it by the credits 
     //add the result to totalGradeScores as an accumulator variable (e.g. tgs=tgs+sswd)
-
+    totalGradeScores += (gradePoints [sswd] * credits);
     
     //get the student's gradePointsfor Ob, multiply it by the credits
     //add the result to totalGradeScores as an accumulator variable (e.g. tgs=tgs+ob)
-   
+    totalGradeScores += (gradePoints [ob] * credits);
+    
     //calculate the gpa as the totalsGradeScores divided by the totalPossibleCredits
     //Output the calculated GPA result to the user using an alert (you must concatenate the gpa)
+    gpa = totalGradeScores / totalPossibleCredits
+    alert("Your GPA is " + gpa);
+    Alert.alert("Your GPA is " + gpa);
   }
 
 
@@ -44,4 +48,5 @@ return (
     </SafeAreaView>
   );
 }
+
 
